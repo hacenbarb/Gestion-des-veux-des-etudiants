@@ -1,0 +1,108 @@
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+body {
+	font-family: sans-serif;
+}
+.wrapper {
+  position: relative;
+  min-height: 100vh;
+  margin-left: 300px;
+  transition: all .2s ease-in-out;
+}
+
+.container {
+  margin: auto;
+  max-width: 1280px;
+  background-color: #FFF;
+  min-height: 100vh;
+}
+
+.collapse-button > button {
+  display: block;
+  overflow: hidden;
+  cursor: pointer;
+  outline: none;
+  background-color: #FFF;
+  width: 2.5rem;
+  height: 2.5rem;
+  border: none;
+  border-radius: 50%;
+  padding: .5rem;
+  transition: all 200ms ease-in-out;
+}
+.collapse-button > button span {
+  display: block;
+  width: 1.2rem;
+  height: 2px;
+  background-color: #333;
+  border-radius: .25rem;
+}
+.collapse-button > button span:not(las-child){
+  margin-bottom: 5px;
+}
+.collapse-button > button:hover{
+  background-color: #EEE;
+  opacity: .8;
+}
+.expanded{
+  margin-left: 0;
+}
+aside {
+  background-color: #FFF;
+  width: 300px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  transition: left 0.125s ease;
+  box-shadow: 0px 3px 1px -2px rgb(0 0 0 / 20%), 0px 2px 2px 0px rgb(0 0 0 / 14%), 0px 1px 5px 0px rgb(0 0 0 / 12%);
+  display: flex;
+  flex-direction: column;
+}
+aside.hidden {
+  left: -300px;
+}
+aside .aside_header  h1 {
+  color: rgb(88,86,214);
+  text-align: center;
+  padding: 1rem;
+  text-transform: uppercase;
+  margin-bottom: 2rem;
+  margin-top: 1rem;
+}
+aside .aside_links ul {
+  list-style: none;
+}
+aside .aside_links ul li a {
+  display: block;
+  text-decoration: none;
+  padding: 1rem .5rem;
+  transition: background-color 0.1s ease;
+  margin-left: .5rem
+}
+aside .aside_links ul li a:hover {
+  background-color: #EEE;
+}
+aside .aside_options {
+	width: 100%;
+	padding: 1rem;
+	background-color: #ff3b3f;
+	margin-top: auto;
+}
+aside .aside_options button {
+	color: #FFF;
+	font-weight: 500;
+	font-size: 1.125rem;
+}
+
+.content {
+	background-color: #FFF;
+	border-radius: .5rem;
+	box-shadow: 0px 3px 1px -2px rgb(0 0 0 / 20%), 0px 2px 2px 0px rgb(0 0 0 / 14%), 0px 1px 5px 0px rgb(0 0 0 / 12%);
+	margin-top: 2rem;
+	margin-left: 1rem;
+	padding: 2rem 1rem;
+}
